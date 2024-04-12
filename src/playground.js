@@ -1,0 +1,3 @@
+const myForEach = (arr,func) => {
+    
+}

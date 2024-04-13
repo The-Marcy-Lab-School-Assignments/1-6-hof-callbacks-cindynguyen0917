@@ -23,3 +23,12 @@ const myFind = (arr, callback) => {
         }
     }
 };
+
+const myFilter = (arr, callback) => {
+    let arr2 = []
+    for (let i = 0; i < arr.length; i++) {
+        if (callback(arr[i])) {
+            arr2.push(arr[i])
+        } return arr2
+    }
+};

@@ -11,7 +11,14 @@ const myMap = (arr, callback) => {
   } return arr2
 };
 
-const myFind = () => {
+const myFind = (arr, callback) => {
+  let arr2 = []
+  for (let i = 0; i < arr.length; i++) {
+    arr2.push(arr[i])
+    if (callback(arr2[i])) {
+      return arr2[i]
+    }
+  }
 };
 
 const myFilter = () => {

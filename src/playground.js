@@ -11,3 +11,15 @@ const myMap = (arr, callback) => {
         arr2 += callback(arr[i])
     }
 };
+
+const myFind = (arr, callback) => {
+    let arr2 = []
+    for (let i = 0; i < arr.length; i++) {
+        arr2.push(arr[i])
+        if (callback(arr2[i])) {
+            return arr2[i]
+        } else {
+            return `undefined`
+        }
+    }
+};

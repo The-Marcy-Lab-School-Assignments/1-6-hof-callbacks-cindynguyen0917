@@ -4,7 +4,11 @@ const myForEach = (arr, callback) => {
   }
 };
 
-const myMap = () => {
+const myMap = (arr, callback) => {
+  let arr2 = []
+  for (let i = 0; i < arr.length; i++) {
+    arr2.push(callback(arr[i]))
+  } return arr2
 };
 
 const myFind = () => {

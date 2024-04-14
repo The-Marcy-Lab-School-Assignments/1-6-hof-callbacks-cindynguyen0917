@@ -30,7 +30,7 @@ const myFilter = (arr, callback) => {
   } return filteredArray
 };
 
-const sortWords = () => {
+const sortWords = (arr) => {
 };
 
 const sortNumbers = () => {

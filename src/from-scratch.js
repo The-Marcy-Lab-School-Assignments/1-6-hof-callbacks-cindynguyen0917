@@ -50,12 +50,28 @@ const sortNumbersBetter = (arr, isDescending) => {
   }
 };
 
-const sortUsersByOrder = () => {
+const sortUsersByOrder = (arr) => {
+  let sortedUsers = [...arr]
+  return sortedUsers.sort((a, b) => a.order - b.order)
 };
 
-const sortUsersByName = () => {
+const sortUsersByName = (arr) => {
+  let sortedUsers = [...arr]
+  return sortedUsers.sort((a, b) => {
+    let nameA = a.name
+    let nameB = b.name
+    if (nameA < nameB) {
+      return -1; //will put nameA before nameB
+    } else if (nameA > nameB) {
+      return 1; //will put NameB before nameA
+    } else {
+      return 0; //the names are the same and no changes are made to the sort
+    }
+  }
+  )
 };
-
+/* https://www.freecodecamp.org/news/how-to-sort-alphabetically-in-javascript/#:~:text=We%20can%20do%20this%20in,of%20objects%20with%20name%20users. */
+//I used this resource because I was lost lol
 module.exports = {
   myForEach,
   myMap,

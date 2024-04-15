@@ -31,9 +31,11 @@ const myFilter = (arr, callback) => {
 };
 
 const sortWords = (arr) => {
+  let sortedNames = [...arr]
+  return sortedNames.sort()
 };
 
-const sortNumbers = () => {
+const sortNumbers = (arr) => {
 };
 
 const sortNumbersBetter = () => {

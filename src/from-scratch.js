@@ -40,7 +40,14 @@ const sortNumbers = (arr) => {
   return sortedNums.sort((a, b) => a - b) //thank you to the alum to taught us this
 };
 
-const sortNumbersBetter = () => {
+const sortNumbersBetter = (arr, isDescending) => {
+  if (isDescending) {
+    let bigToSmall = [...arr].sort((a, b) => b - a)
+    return bigToSmall
+  } else {
+    let smallToBig = [...arr].sort((a, b) => a - b)
+    return smallToBig
+  }
 };
 
 const sortUsersByOrder = () => {

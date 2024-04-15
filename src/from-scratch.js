@@ -36,6 +36,8 @@ const sortWords = (arr) => {
 };
 
 const sortNumbers = (arr) => {
+  let sortedNums = [...arr]
+  return sortedNums.sort((a, b) => a - b) //thank you to the alum to taught us this
 };
 
 const sortNumbersBetter = () => {
